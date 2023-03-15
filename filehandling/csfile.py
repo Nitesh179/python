@@ -16,10 +16,10 @@ with open('csvfile.csv','r',newline='') as f:
 
 print("{} employee data will be stored!!!!".format(n))   '''
 
- r=csv.reader(f)
+ '''r=csv.reader(f)
  data=list(r)
 
  for i in data:
   for j in i:
    print(j,'\t',end='')
-  print()
+  print()'''

@@ -1,0 +1,45 @@
+Python Topics covered :
+
+> Basic Introduction
+  ->python syntax
+  ->where we can use python
+  ->limitations
+  ->flavors of python
+  ->python versions
+  
+> Identifiers in python 
+  ->with rules
+  ->reserverd words
+
+> Data Types 
+
+> Data Structure
+  ->tuple
+  ->list
+  ->dictionary
+  
+> Type casting
+
+> Operators
+  ->Arithematic
+  ->Relational
+  ->logical
+  ->Assignment
+  ->special
+  ->membership
+  
+> Input & Output Statement
+
+> CommandLine Argument
+
+> Flow Control (for,while,if,elif)
+
+> Functions
+
+> Decorator
+
+> Generators
+
+> Modules
+
+> File Handling    

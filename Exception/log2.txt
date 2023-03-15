@@ -1,0 +1,14 @@
+INFO:root:A new connection came
+ERROR:root:invalid literal for int() with base 10: 'ds'
+Traceback (most recent call last):
+  File "logging1.py", line 25, in <module>
+    b=int(input("2 => "))
+ValueError: invalid literal for int() with base 10: 'ds'
+INFO:root:request processing completed
+INFO:root:A new connection came
+ERROR:root:division by zero
+Traceback (most recent call last):
+  File "logging1.py", line 26, in <module>
+    print(a/b)
+ZeroDivisionError: division by zero
+INFO:root:request processing completed

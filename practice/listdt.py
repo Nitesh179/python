@@ -20,7 +20,7 @@
 
 # list methods :
 
-list=[1,4,5,67,7,7,7,7,7]
+# list=[1,4,5,67,7,7,7,7,7]
 # list.sort()  # sort the list by ascending order
 
 # list.reverse() # reverse print the list without asc or desc
@@ -33,8 +33,8 @@ list=[1,4,5,67,7,7,7,7,7]
 
 # list.remove(67) # it will remove this no. from list
 
-list2=[2,2,2,2]
-list.extend(list2)
+# list2=[2,2,2,2]
+# list.extend(list2)
 
 
 # list.clear()
@@ -43,4 +43,11 @@ list.extend(list2)
 # print(l)
 
 
-print(list)
+# print(list)
+
+
+
+lst=['python','hub']
+for i in lst:
+    lst.append(i.upper())
+print(lst)    

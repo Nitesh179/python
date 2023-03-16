@@ -1,3 +1,5 @@
+import sys
+
 class Bank:
   balance=0
   def __init__(self,bal):
@@ -11,6 +13,7 @@ class Bank:
      bal=bal-amt
      self.balance=bal
      return self.balance
+    else : print("Insufficient balance ")
 
   def deposite(self,amt):
     bal=self.balance
@@ -21,11 +24,19 @@ class Bank:
   def sbalance(self):
     return self.balance   
 
-person1=Bank(int(input("enter deposite amount : ")))
 
+print("\n\n\t\t#========== WELOCOME To ABC Bank ==========#\n\n")
+
+while True:
+ dep=int(input("enter deposite amount : "))
+ if dep>10000:break
+ elif input("if you want to exit : press 0 \n otherwise enter Amount : ")=='0':
+  sys.exit(0)
+
+person1=Bank(dep)
 while(True):
 
- print("How may i help you choose anyone ?\n  withdraw amount(press 1)\n  deposite amount(press 2)\n  check balance(press 3)\n\n")
+ print("How may i help you choose anyone ?\n  1. withdraw amount\n  2. deposite amount\n  3. check balance\n\n")
 
  try :
   ch=int(input("enter choice => "))
@@ -34,7 +45,7 @@ while(True):
 
  else :
   if ch==1:
-   res=person1.withdraw(int("enter amount : "))
+   res=person1.withdraw(int(input("enter amount : ")))
    print(res)
   elif ch==2:
    res=person1.deposite(int(input("enter amount : ")))
@@ -47,14 +58,16 @@ while(True):
  
  print("want to any operation (y/n)")
  try:
-   want=input("=> ")
-   if want=='y' or want=='yes':
-    pass
-   elif want=='n' or want=='no':
-    break
-   else : print("select correct option")
+   while True:
+    want=input("=> ")
+    if want=='y' or want=='yes':
+     break
+    elif want=='n' or want=='no':
+     sys.exit(0)
+    else : print("select correct option")
  except Exception:
   print("enter yes or no")
+  
 
 
 

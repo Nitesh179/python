@@ -1,4 +1,4 @@
-'''
+
 import smtplib
 
 def sendMail(email):
@@ -6,9 +6,7 @@ def sendMail(email):
     user=input("enter your name : ")
 
     message=(f"Hello, {user} Wellcome to Python Blockchain Program.")
-    s=smtplib.SMTP("bnitesh179@gmail.com",587) 
-    print("tuunhdfjhnj")
-    # print("smtp lib")
+    s=smtplib.SMTP("smtp.gmail.com",587) 
     s.starttls()
     s.login('bnitesh179@gmail.com','ozdg aqrq szag xndz')
     s.sendmail("bnitesh179@gmail.com",email,message)
@@ -16,11 +14,10 @@ def sendMail(email):
 
  except Exception: print("Mail not sent....")
 
-sendMail("neerajoon121@gmail.com")    
+sendMail("divyanshi1001@gmail.com")    
 
 
 '''
-
 from GoogleNews import GoogleNews
 
 news=GoogleNews(period='1d')
@@ -31,3 +28,4 @@ import pandas as pd
 data=pd.DataFrame.from_dict(result)
 data=data.drop(columns=["imgage"])
 data.head()
+'''

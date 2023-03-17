@@ -59,9 +59,7 @@ os.system('clear')'''
 #         print("-" * 80)
 #     with open(filepath, "r") as f:
 #         print(f.read())
-
-
-# if __name__ == "__main__":
+#  == "__main__":
 #     app()
 
 # input("Enter any key")
@@ -78,15 +76,76 @@ os.system('clear')'''
 # # today = datetime.date.today1()
 # print(time)
 
-def show(*inp):
-    for i in inp:
-        if i=="1":
-            print("one")
-        elif i=="2":
-            print("two")
+# def show(*inp):
+#     for i in inp:
+#         if i=="1":
+#             print("one")
+#         elif i=="2":
+#             print("two")
 
-inp = [input("Enter multiple value").split(" ")]
+# inp = [input("Enter multiple value").split(" ")]
 
-print(inp)
+# print(inp)
 
-show(inp)
+# show(inp)
+
+# import datetime
+# import pymongo
+
+# cluster = pymongo.MongoClient('mongodb+srv://vinsharex:G0emexG4oEc92DW9@pythonprojects.gn9deee.mongodb.net/customer_detail?retryWrites=true&w=majority')
+# db = cluster["customer_detail"]
+# client = db["Client_detail"]
+
+# date=datetime.date.today()
+# client.insert_one({"_id":0, "user 1":"Soumi","dob": datetime.datetime.utcnow()})
+
+ 
+# from datetime import datetime
+# d1=datetime.today()
+# # d = datetime(d1)
+# print(d1.strftime('%Y-%m-%d'))    
+ 
+
+# for updating data customer_data :
+
+# for data in client.find():
+#  client.update_one({"_id":data['_id']}, {"$set": {"adhar":str(random.randint(111111111111,999999999999))}}, upsert=True)
+
+
+#  delay execution in python :
+# import time
+
+# for i in range(1,6):
+#     print(i)
+#     time.sleep(2)
+
+# import time
+# import csv,pymongo,datetime,time
+
+# from rich.live import Live
+# from rich.table import Table
+
+# cluster = pymongo.MongoClient('mongodb+srv://vinsharex:G0emexG4oEc92DW9@pythonprojects.gn9deee.mongodb.net/customer_detail?retryWrites=true&w=majority')
+# db = cluster["customer_detail"]
+# client = db["customer_data"]
+
+
+# table = Table()
+# table.add_column("Row ID")
+# table.add_column("Description")
+# table.add_column("Level")
+
+# with Live(table, refresh_per_second=4):  # update 4 times a second to feel fluid
+#     data = client.find().sort("acc_no",1)
+    
+#     for customer in data:
+#         time.sleep(0.4)  # arbitrary delay
+#         d2 = str(customer['openingDate']).split(" ")[0].split("-")
+#         d1 = datetime.datetime(int(d2[0]),int(d2[1]),int(d2[2]))
+#         d=datetime.datetime.strftime(d1,'%Y-%m-%d')
+#         # print(customer['acc_no'],customer['openingDate'],customer['name'],customer['contact'],customer['dob'],customer['address'],customer['balance'])
+#         table.add_row(str(customer['acc_no']),str(d),str(customer['adhar']),str(customer['name']),str(customer['contact']),str(customer['dob']),str(customer['address']),str(customer['balance']))
+        
+#         # update the renderable internally
+#         # table.add_row(f"{row}", f"description {row}", "[red]ERROR")
+

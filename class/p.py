@@ -14,6 +14,15 @@ print(s1.talk())
 this=10
 print(this)'''
 
+# dummy data :
+'''
+ # for dummy data :
+    # name=['nitesh','vinay','sunny','bunny','jay','suresh','vinny','chinny','chiku','neeraj']
+    # date=['18-04-2001','11-02-2001','05-02-2015','15-02-2020','02-02-2012','11-02-2012','13-02-2001','12-03-2011','12-02-2010','12-02-2002']
+    # address=['indore','indore','bhopal','ujjain','devas']
+    # bal=[12000,13000,50000,15000,20000,17000]
+'''
+
 '''import os
 print("************************************************************")
 print("=================== WELCOME TO ABC Bank ====================")
@@ -148,4 +157,100 @@ os.system('clear')'''
         
 #         # update the renderable internally
 #         # table.add_row(f"{row}", f"description {row}", "[red]ERROR")
+
+
+
+
+from rich import print
+from rich.panel import Panel
+
+from rich import print
+from rich.padding import Padding
+
+# padding=Padding("Hello", (2, 4)) 
+# data=Padding("ADMIN LOGIN\n \n user : nitesh\n pass : ****",(2,2,2,2))  # top,right,down,left (^,>,V,<)
+# print(Panel.fit(data))
+# print(Panel.fit("Hello, [red]World!"))
+
+
+from rich.prompt import Confirm
+
+# is_rich_great = Confirm.ask("Do you like rich?")
+
+# assert is_rich_great
+
+
+"""print("I am ___ years old", end="\r", flush=True)
+age = input("I am ")
+print(age)
+"""
+# import os
+# os.system('clear')
+# print("************************************************************")
+# print("*================== WELCOME TO ABC Bank ===================*")
+# print("************************************************************")
+# print("*                     Admin Login                          *")
+# print("*                                                          *")
+# print("*           User name                                      *", end="\r",flush=True)
+# name = input("*           User name :")
+# print("*                                                          *")
+# print("*           Password                                       *", end="\r",flush=True)
+# pwd = input("*           password :")
+# print("*                                                          *")
+# print("************************************************************")
+
+# print(name, " " , pwd)
+
+
+
+# abc =(f'''\n    ************************************************************
+#     *================== WELCOME TO ABC Bank ===================*
+#     ************************************************************
+#     *                     Admin Login                          *
+#     *                                                          *
+#     *           User name                                      *
+#     *                                                          *
+#     *           Password                                       *
+#     *                                                          *
+#     *                                                          *
+#     ************************************************************''')
+
+
+# nn="niyrh"
+# # data=Padding(f"ADMIN LOGIN\n \n user : {a}\n pass : ****",input(" :")(2,2,2,2))  
+# print(Panel.fit(abc))
+
+
+
+
+# a=('''*           User name                                      *", end="\r",flush=True)
+# name = input("*           User name :''')
+
+# b=('''*           Password                                       *", end="\r",flush=True)
+# pwd = input("*           password :''')
+
+# print(Panel.fit(a +b))
+
+# choice = Confirm.ask("Incorrect User name or Password !!! \nDo you want to try again ?")
+        # print("Incorrect User name or Password !!! \nPress enter to try again.\nPress 0 to exit")
+        # if choice=="n" or choice=="N":
+        #     sys.exit(0) 
+        # else:    
+        #  time.sleep(3)
+# print(choice, type(choice))
+
+# import getpass
+# pwd=int(getpass.getpass("Password : "))
+# # getpass.getpass(prompt=f"{player1} turn : Rock(r) Paper(p) sessor(s) ? ")
+# print(pwd)
+
+
+
+from rich.console import Console
+from rich.text import Text
+
+console = Console()
+text = Text("Hello, World!")
+text.stylize("bold magenta", 0, 6)
+console.print(text)
 

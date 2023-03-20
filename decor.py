@@ -32,6 +32,22 @@ def division(a,b):
 division(20,0)
 division(10,5)'''
 
+'''
+def decor(func):
+    def inner(num):
+        if num%2!=0:print("Not even no")
+        else :func(num)
+    return inner
+@decor
+def even(num):
+    print("=> ",num) 
+
+even(int(input("=> ")))
+  
+'''
+
+
+
 # decorator chaining :
 
 def decor(func):

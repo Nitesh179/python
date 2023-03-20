@@ -14,3 +14,7 @@ for i in ran:
 
 # l=list(range(10))
 # print(l)
+
+
+for i in range(10,1,-1): # 1 to 10 --> 1 # 10 to 1 --> -1
+  print(i)

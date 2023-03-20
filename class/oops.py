@@ -1,9 +1,9 @@
 class Bank:
+    acc=2314
     def show(self):
-        print(self) 
+        nm="nitesh"
+        print("hello ",nm) 
     
 
-a=Bank()
-b=Bank()
-a.show()
-b.show()    
+print(Bank.__doc__)  
+help(Bank)

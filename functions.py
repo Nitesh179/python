@@ -125,9 +125,11 @@ del wish
 greet("nitesh")'''
 
 # Nested Function :
-def university(uname):
-    def Acollage():print("Arhint collage registration Open...")
-    def Bcollage():print("This is Brillent collage...")
-    Acollage()  
+# def university(uname):
+#     def Acollage():print("Arhint collage registration Open...")
+#     def Bcollage():print("This is Brillent collage...")
+#     Acollage()  
 
-university("DAVV")   
+# university("DAVV")   
+
+

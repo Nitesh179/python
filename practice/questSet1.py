@@ -4,6 +4,9 @@
 elif int(input("=> "))%2==0 : print("this is even number")
 else :  print("this is odd number")"""
 
+even=lambda enum:enum if enum%2==0 else "not even"
+print(even)
+
 # check given number is between 0-100 ?
 
 """if int(input("=> "))<101 : print("valid number...")

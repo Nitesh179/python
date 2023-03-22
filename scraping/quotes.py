@@ -1,12 +1,12 @@
+from rich.console import Console
+from rich.table import Table
 import html5lib,requests,json
 from bs4 import BeautifulSoup
 from rich import print
 from rich.console import Console
 from rich.table import Table
-
-# link work :
-
-
+import time,os
+from rich.progress import track
 
 res=requests.get('http://www.quotationspage.com/quotes/')
 
@@ -17,57 +17,57 @@ authorLink=soup.find('td',{"id":"content"}).find('tr').find_all('a')
 authorsName=[]
 authorsUrl=[]
 quoteList=[]
-dic={}
-mydata=[]
+data=[]
 
-for i in authorLink:
-    authorsName.append(i.text)
-    authorsUrl.append(i.get('href'))
-    
-for url in authorsUrl:
+# check file available or not :
 
-    res=requests.get("http://www.quotationspage.com/"+url)
+fileavailable=os.path.isfile('QuoteData.json')
 
-    soup=BeautifulSoup(res.content,'html.parser')
+if fileavailable:
+    # import json data :
 
-   
-    quotes=soup.find('td',{"id":"content"}).findAll('dt',{"class":"quote"})
-    # for i in quotes:
-    #     dic['quotes']=i.text
-    #     quoteList.append(dic.copy())  
-    
-    for i,j in zip(quotes,authorsName):
-        mydata.append({:i.text})
-        dic['quotes']=i.text
-        quoteList.append(dic.copy())  
-        
+    f=open('QuoteData.json','r')
+    data=json.load(f)
 
-    print(mydata)
-
-    #  insert data into json file :
-
-    '''f=open('Qtdata.json','w')
-    # json.dump(quoteList,f,indent=4)
-    f.close()'''
-
-    #  fetch data from json file :
-    f1=open('Qtdata.json','r')
-    data=json.load(f1)
-    # print(data[0]['quotes'])
-
+# if file Not available execute this :
  
-    # for author in authorsName:
+    if len(data)==0:
+        for i in authorLink:
+            authorsName.append(i.text)
+            authorsUrl.append(i.get('href'))
 
-   
-    table = Table(title=f"\n\n[bold magenta]Quatations By author \n\n")
+        for url,name,i in zip(authorsUrl,authorsName,track(range(len(data)), description="Scanning Quotes...")):
 
-    table.add_column("QUOTES LISTS",style="blue_violet",no_wrap=False)
+                res=requests.get("http://www.quotationspage.com/"+url)
 
-    for i in data:        
-            table.add_row(i['quotes'])
-            table.add_row('\n')
+                soup=BeautifulSoup(res.content,'html.parser')
 
-    console = Console()
-    console.print(table)    
+                tempQuote=[]
+                quotes=soup.find('td',{"id":"content"}).findAll('dt',{"class":"quote"})
+                for i in quotes: tempQuote.append(i.text)
 
-    f1.close()
+                quoteList.append({"Author":name,"Quotes":tempQuote})
+
+        # insert data in json file :
+
+        f=open('QuoteData.json','w')
+        json.dump(quoteList,f,indent=4)
+        f.close()
+
+    else :
+        author=input("Enter Author Name : ")
+
+        for i in data:
+            for j in i:
+                if i[j]==author:
+
+                    table = Table(title="\n\n [bold magenta]Quotations by Author!!!\n")
+                    table.add_column(author, style="cyan", no_wrap=False)
+                    
+                    for qt in i['Quotes']:
+                        table.add_row(str(qt))
+                        table.add_row("\n")
+
+                    console = Console()
+                    console.print(table)
+

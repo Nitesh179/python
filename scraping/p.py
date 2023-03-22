@@ -15,7 +15,12 @@
 # console = Console()
 # console.print(table)
 
-from rich.console import Console
-from rich.theme import Theme
-console = Console(theme=Theme({"repr.number": "bold green blink"}))
-console.print("The total is 128")
+# from rich.console import Console
+# from rich.theme import Theme
+# console = Console(theme=Theme({"repr.number": "bold green blink"}))
+# console.print("The total is 128")
+import time
+from rich.progress import track
+
+for i in track(range(20), description="Processing..."):
+    time.sleep(1)  # Simulate work being done

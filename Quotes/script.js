@@ -1,5 +1,5 @@
 
-// const fetch=require('node-fetch');
+// const emoji=require('./emoji.json');
 
 function fetchdata(){
   fetch('./QuoteData.json').then((res)=>res.json()).then((data)=>{ 
@@ -16,14 +16,23 @@ function fetchdata(){
             var authr2=qt2.Author
             var authr3=qt3.Author
 
+            fetch("./emoji.json").then(res=> res.json()).then(emoji=>{
+              document.getElementById('img-1').src=emoji[Math.floor(Math.random() * emoji.length)]
+              document.getElementById('img-2').src=emoji[Math.floor(Math.random() * emoji.length)]
+              document.getElementById('img-3').src=emoji[Math.floor(Math.random() * emoji.length)]
+            })
+
             document.getElementById('quote-1').innerHTML=quote1
             document.getElementById('author-1').innerHTML=authr1
+            // document.getElementById('img-1').src=authr1
 
             document.getElementById('quote-2').innerHTML=quote2
             document.getElementById('author-2').innerHTML=authr2
+            // document.getElementById('img-2').src=authr1
 
             document.getElementById('quote-3').innerHTML=quote3
             document.getElementById('author-3').innerHTML=authr3
+            // document.getElementById('img-3').src=authr1
         
   })
 }

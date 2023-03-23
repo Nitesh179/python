@@ -1,0 +1,75 @@
+[
+    {
+        "Company Name": "Urban",
+        "Intro": "Urban is a marketplace for independent contractors.",
+        "Detail": "City: GurgaonStarted in: 2014Founders: Abhiraj Singh Bhal, Raghav Chandra, Varun KhaitanIndustries: Apps, Home Services, Marketplace, Service IndustryNumber of employees: 1001-5000Funding amount: $445,920,356Number of funding rounds: 12Number of investors: 16",
+        "URL": "https://www.urbancompany.com"
+    },
+    {
+        "Company Name": "Classplus",
+        "Intro": "Classplus is a mobile-first SaaS platform that allows 3000+ tutors to totally automate their curriculum and operations.",
+        "Detail": "City: NoidaStarted in: 2018Founders: Bhaswat Agarwal, Bikash Dash, Mukul Rustagi, Nikhil Goel, Vatsal RustagiIndustries: B2B, E-Learning, EdTech, Education, Mobile Apps, SaaS, SoftwareNumber of employees: 101-250Funding amount: $89,506,451Number of funding rounds: 10Number of investors: 20",
+        "URL": "https://classplusapp.com/"
+    },
+    {
+        "Company Name": "Paytm",
+        "Intro": "Paytm is a payment gateway that allows users and businesses to make payments.",
+        "Detail": "City: NoidaStarted in: 2010Founders: Akshay Khanna, Vijay Shekhar SharmaIndustries: E-Commerce, Finance, Financial Services, Internet, Mobile Apps, Mobile PaymentsNumber of employees: 501-1000Funding amount: $32,448,851Number of funding rounds: 4Number of investors: 4",
+        "URL": "https://paytm.com/"
+    },
+    {
+        "Company Name": "Apna",
+        "Intro": "Apna is a professional networking and job-search platform that connects blue- and gray-collar professionals with like-minded people and places to work.",
+        "Detail": "City: MumbaiStarted in: 2019Founders: Nirmit ParikhIndustries: Employment, Human Resources, Recruiting, Staffing AgencyNumber of employees: 101-250Funding amount: $93,450,000Number of funding rounds: 4Number of investors: 6",
+        "URL": "https://apna.co"
+    },
+    {
+        "Company Name": "Razorpay",
+        "Intro": "Razorpay is a payment acceptance, processing, and disbursement platform for businesses.",
+        "Detail": "City: BengaluruStarted in: 2014Founders: Harshil Mathur, Shashank KumarIndustries: Financial Services, FinTech, Payments, SoftwareNumber of employees: 1001-5000Funding amount: $366,600,000Number of funding rounds: 7Number of investors: 29",
+        "URL": "https://razorpay.com/"
+    },
+    {
+        "Company Name": "UpGrad",
+        "Intro": "UpGrad is a higher education portal that offers courses in Data Science, Technology, Management, and Law online.",
+        "Detail": "City: MumbaiStarted in: 2015Founders: Mayank Kumar, Phalgun Kompalli, Ravijot Chugh, Ronnie ScrewvalaIndustries: E-Learning, EdTech, EducationNumber of employees: 1001-5000Funding amount: $176,283,446Number of funding rounds: 4Number of investors: 4",
+        "URL": "https://upgrad.com"
+    },
+    {
+        "Company Name": "Delhivery",
+        "Intro": "Delhivery is a supply chain management firm that specializes in transportation, warehousing, freight, and order fulfillment.",
+        "Detail": "City: GurgaonStarted in: 2011Founders: Bhavesh Manglani, Kapil Bharati, Mohit Tandon, Sahil Barua, Suraj SaharanIndustries: E-Commerce, Freight Service, Last Mile Transportation, Logistics, Shipping, Supply Chain Management, Transportation, WarehousingNumber of employees: 5001-10000Funding amount: $1,236,569,361Number of funding rounds: 11Number of investors: 13",
+        "URL": "https://www.delhivery.com"
+    },
+    {
+        "Company Name": "1mg",
+        "Intro": "1mg is a generic drug engine and online pharmacy network platform.",
+        "Detail": "City: GurgaonStarted in: 2015Founders: Anurag Mundhada, Gaurav Agarwal, Prashant Tandon, Sameer Maheshwari, Vikas ChauhanIndustries: Delivery, E-Commerce, Health Care, Internet, Medical, PharmaceuticalNumber of employees: 11-50Funding amount: $204,600,209Number of funding rounds: 16Number of investors: 17",
+        "URL": "https://www.1mg.com/"
+    },
+    {
+        "Company Name": "BigBasket",
+        "Intro": "BigBasket is an online grocery and meal delivery service that brings personal and household items to customers' doorsteps.",
+        "Detail": "City: BengaluruStarted in: 2011Founders: Abhinay Choudhari, Hari Menon, Vipul Parekh, VS Ramesh, VS SudhakarIndustries: Delivery, Delivery Service, E-Commerce, Grocery, Internet, Retail, ShoppingNumber of employees: 5001-10000Funding amount: $1,119,863,468Number of funding rounds: 17Number of investors: 17",
+        "URL": "https://bigbasket.com"
+    },
+    {
+        "Company Name": "GoMechanic",
+        "Intro": "GoMechanic is an online vehicle repair platform that allows consumers to arrange car maintenance at a convenient time.",
+        "Detail": "City: GurgaonStarted in: 2016Founders: Amit Bhasin, Kushal Karwa, Nitin Rana, Puneet Gulati, Rishabh KarwaIndustries: Automotive, Customer Service, E-Commerce, SalesNumber of employees: 251-500Funding amount: $59,849,371Number of funding rounds: 8Number of investors: 9",
+        "URL": "https://gomechanic.in/"
+    },
+    {
+        "Company Name": "Unacademy",
+        "Intro": "Unacademy is a web-based learning portal that offers educational materials such as video lectures and exams.",
+        "Detail": "City: BengaluruStarted in: 2015Founders: Gaurav Munjal, Hemesh Singh, Roman Saini, Sachin GuptaIndustries: E-Learning, EdTech, Education, TrainingNumber of employees: 251-500Funding amount: $398,500,000Number of funding rounds: 11Number of investors: 36",
+        "URL": "https://unacademy.com/"
+    },
+    {
+        "Company Name": "Ola",
+        "Intro": "Ola is an Indian mobility platform and ride-hailing firm.",
+        "Detail": "City: KormangalaStarted in: 2010Founders: Ankit Bhati, Bhavish AggarwalIndustries: Apps, Internet, Mobile, Ride Sharing, TransportationNumber of employees: 5001-10000Funding amount: $3,808,672,049Number of funding rounds: 25Number of investors: 45",
+        "URL": "https://www.olacabs.com"
+    }
+    
+]

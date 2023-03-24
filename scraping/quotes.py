@@ -21,53 +21,54 @@ data=[]
 
 # check file available or not :
 
-fileavailable=os.path.isfile('QuoteData.json')
+fileavailable=os.path.isfile('QuoteData1.json')
 
 if fileavailable:
     # import json data :
 
-    f=open('QuoteData.json','r')
+    f=open('QuoteData1.json','r')
     data=json.load(f)
 
 # if file Not available execute this :
- 
-    if len(data)==0:
-        for i in authorLink:
-            authorsName.append(i.text)
-            authorsUrl.append(i.get('href'))
 
-        for url,name,i in zip(authorsUrl,authorsName,track(range(len(data)), description="Scanning Quotes...")):
+if len(data)==0:
+    for i in authorLink:
+        authorsName.append(i.text)
+        authorsUrl.append(i.get('href'))
 
-                res=requests.get("http://www.quotationspage.com/"+url)
+    for url,name,q in zip(authorsUrl,authorsName,track(range(111), description="Scanning Quotes...")):
 
-                soup=BeautifulSoup(res.content,'html.parser')
+        res=requests.get("http://www.quotationspage.com/"+url)
 
-                tempQuote=[]
-                quotes=soup.find('td',{"id":"content"}).findAll('dt',{"class":"quote"})
-                for i in quotes: tempQuote.append(i.text)
+        soup=BeautifulSoup(res.content,'html.parser')
 
-                quoteList.append({"Author":name,"Quotes":tempQuote})
+        tempQuote=[]
+        quotes=soup.find('td',{"id":"content"}).findAll('dt',{"class":"quote"})
+        for i in quotes: tempQuote.append(i.text)
 
-        # insert data in json file :
+        quoteList.append({"Author":name,"Quotes":tempQuote})
+        # print({"Author":name,"Quotes":tempQuote})
 
-        f=open('QuoteData.json','w')
-        json.dump(quoteList,f,indent=4)
-        f.close()
+    # insert data in json file :
+   
+    f=open('QuoteData1.json','w')
+    json.dump(quoteList,f,indent=4)
+    f.close()
 
-    else :
-        author=input("Enter Author Name : ")
+else :
+    author=input("Enter Author Name : ")
 
-        for i in data:
-            for j in i:
-                if i[j]==author:
+    for i in data:
+        for j in i:
+            if i[j]==author:
 
-                    table = Table(title="\n\n [bold magenta]Quotations by Author!!!\n")
-                    table.add_column(author, style="cyan", no_wrap=False)
-                    
-                    for qt in i['Quotes']:
-                        table.add_row(str(qt))
-                        table.add_row("\n")
+                table = Table(title="\n\n [bold magenta]Quotations by Author!!!\n")
+                table.add_column(author, style="cyan", no_wrap=False)
+                
+                for qt in i['Quotes']:
+                    table.add_row(str(qt))
+                    table.add_row("\n")
 
-                    console = Console()
-                    console.print(table)
+                console = Console()
+                console.print(table)
 

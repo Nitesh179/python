@@ -21,14 +21,19 @@ if file:
 
 if len(fetchdata)==0:
     for alldata in data:
-
+        
         companyName=alldata.find_all('h3')
         link=alldata.find_all('a')[:-2]
         desc=alldata.find_all('ul')[:-2]
+        image=alldata.find_all('figure')
+        # for i in image:
+        #     print(i.find('img').get('src'))
 
-        for i,k,l in zip(companyName,desc,link):
+    
+       
+        for i,k,l,img in zip(companyName,desc,link,image):
             coStr=str(i.text).split()
-            dict={"Company Name":coStr[1],"Intro":i.find_next_sibling("p").text,"Detail":k.text,"URL":l.get('href')}
+            dict={"Company Name":coStr[1],"imgUrl":img.find('img').get('src'),"Intro":i.find_next_sibling("p").text,"Detail":k.text,"URL":l.get('href')}
             mainList.append(dict.copy())  
 
     

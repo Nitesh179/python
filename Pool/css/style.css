@@ -1,0 +1,93 @@
+body{
+    background-image: url('https://img.freepik.com/free-vector/halftone-texture-border-background_1409-1839.jpg?w=826&t=st=1680090348~exp=1680090948~hmac=709366d325be4612cf7103aa41e1a62659d85731eb6bbe580dce0ded7dac6a7d');
+    background-size: cover;
+    font-size: 1rem;
+} 
+
+#containermain{
+ width: fit-content;
+ height:auto;
+}
+
+
+#progressid{
+    height: 7px;
+}
+
+p#heading_text{
+    font-size: 25px;
+    
+}
+
+
+.form-control{
+    padding:20px;
+
+}
+
+.form-floating>.form-control, .form-floating> .formselect{
+    height: calc(36.5px + 2px);
+}
+
+
+
+
+.button {
+    position: relative;
+    border: none;
+    display: inline-block;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2),
+          inset 0px -5px 0px 0px rgba(0,0,0,0.3),
+       inset 0px 2px 0px 0px rgba(255,255,255,0.5);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 6px;
+   }
+   
+   .button:active {
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2),
+          inset 0px -2px 0px 0px rgba(0,0,0,0.3),
+       inset 0px 2px 0px 0px rgba(255,255,255,0.5);
+    top: 3px;
+   }
+   
+   
+   .wood {
+    background: url(http://1.bp.blogspot.com/-tXavBQFjNFQ/VMSaYaq7PtI/AAAAAAAADSc/awMPRe3yu5A/s1600/wood_pattern.png);
+   }
+
+
+     
+
+    .gameboard{
+        width: 90%;
+        height: 70vh;
+        background-image: url(/image/board1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        /* margin-left:40vh; */
+        
+    }
+
+    @media only screen and (min-width:768px){
+        .gameboard{
+            height: 70vh;
+        }
+    }
+        
+    
+    
+    @media only screen and (max-width: 768px) and (min-width: 500px) {
+        .gameboard{
+            height: 39vh;
+        }
+    }
+
+    @media only screen and (max-width: 500px)  {
+        .gameboard{
+            height: 25vh;
+        }
+    }

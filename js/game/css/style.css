@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+        overflow: hidden;
+        background-image: url('https://img.freepik.com/free-vector/halftone-texture-border-background_1409-1839.jpg?w=826&t=st=1680090348~exp=1680090948~hmac=709366d325be4612cf7103aa41e1a62659d85731eb6bbe580dce0ded7dac6a7d');
+        background-size: cover;
+       
+    
+}
+.gameContainer{
+    background-image: url(/assets/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+    margin-top: 1vh;
+}
+
+.dino{
+    background-image: url(/assets/dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 233px;
+    height: 114px;
+    position: absolute;
+    bottom:0;
+    left: 52px;
+}
+
+.obstacle{
+    width: 166px;
+    height: 113px;
+    background-image: url(/assets/dragon.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
+
+.animateDino{
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#scoreCont{
+    font-size: 25px;
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 12vh;
+    top: 3vh;
+    /* border: 2px solid black; */
+    /* padding: 10px; */
+    font-family: 'Ubuntu', sans-serif;
+    /* border-radius: 10px; */
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 340px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}

@@ -33,14 +33,14 @@
 
   <!--  Upper Body -->
 
-  <div class="container border rounded mt-4" style="background-color: whitesmoke;">
+  <div class="container border rounded mt-4" style="background-color: whitesmoke; height: auto;">
 
     <!--  progress bar -->
     <div>
         <!-- main heading -->
         <div class="text-center mt-1">
             <p style=" font-size: 25px;">Let's Connect! Win the Game! Start with the Coffee</p>
-            <p id="scoreCont"></p>
+            <p id="scoreCont" class="invisible"></p>
         </div>
         <!-- progress bar -->
         <div class="mt-1"><i class="bi bi-trophy" id="trophy"> 0/6 </i></div>
@@ -54,54 +54,14 @@
 
 
     <!-- forms -->
-    <div class="row container" style="font-size: 14px;  " id="contact-form">
-        
-        
-        <!-- <div class="col-md-4">
-            <div class="form-floating mb-2 ">
-                <input type="email" class="form-control " id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">First Name</label>
-            </div>
+    <form class=" row" id="contact-form"> </form>
 
-            <div class="form-floating mb-2  ">
-                <input type="email" class="form-control " id="floatingInputs" placeholder="name@example.com">
-                <label for="floatingInputs">Designation</label>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="form-floating mb-2  ">
-                <input type="email" class="form-control " id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Last Name</label>
-            </div>
-
-            <div class="form-floating mb-2 ">
-                <input type="email" class="form-control " id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Mobile</label>
-            </div>
-
-        </div>
-
-        <div class="col-md-4">
-            <div class="form-floating mb-2  ">
-                <input type="email" class="form-control " id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email</label>
-            </div>
-
-            <div class="form-floating mb-2  ">
-                <input type="email" class="form-control " id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Organization</label>
-            </div>
-        </div> -->
-
-
-
-    </div>
-
-    <!-- forms Button -->
-    <div class="mb-1 text-center">
-        <button class="button wood btn-lg w-auto fs-6 " style=" border-radius: 25px; padding: 8px;"> <i
-                class="bi bi-8-circle-fill"></i> Submit</button>
+    <!-- Button -->
+    <div class="mb-1 text-center" >
+        <!-- <button id="start" onclick="gameStart()" class="button wood btn-lg w-auto fs-6 fw-bolder" style=" border-radius: 25px; padding: 13px;"> <i class="bi bi-check2-square"></i> START</button> -->
+      
+        <button onclick="formSubmit()" id="submit" class="invisible button wood btn-lg w-auto fs-6 fw-bolder" style=" border-radius: 25px; padding: 13px;"> <i class="bi bi-check2-square"></i> Submit</button>
+       <div id="timerid" class=""> </div>
     </div>
   </div>
 
@@ -110,17 +70,18 @@
 
    <div class="row mt-4">
     
-    <div class="gameContainer">
+    <div class="gameContainer" style="height: 100vh;">
         <div class="gameOver">Welcome to iDragon Adventures</div>
         
         <div class="dino"></div>
 
         <!-- <div id="scoreCont">Your Score: 0</div> -->
 
-        <div class="obstacle obstacleAni"></div>
+        <div class="obstacle obstacleAni" id=""></div>
     </div>
     
    </div>
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    
 </body>

@@ -11,7 +11,7 @@
    
    
    
-   /* .form-control{
+   .form-control{
        padding:20px;
    
    }
@@ -23,7 +23,7 @@
    .form-floating > label{
     padding:0.4rem .75rem;
    }
-    */
+   
    
    .button {
        position:relative;
